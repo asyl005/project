@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Регистрация</title>
+  <title>Вход</title>
   <style>
     * {
       margin: 0;
@@ -38,7 +38,7 @@
       display: block;
       margin-bottom: 5px;
     }
-    input[type="text"], input[type="email"], input[type="password"] {
+    input[type="text"], input[type="password"] {
       width: 100%;
       padding: 10px;
       font-size: 16px;
@@ -71,7 +71,7 @@
     }
     .image-section {
       width: 50%;
-      background-image: url('опрос.jpg'); /* Укажите путь к изображению */
+      background-image: url('опрос.jpg'); /* Замените на путь к нужному изображению */
       background-size: cover;
       background-position: center;
     }
@@ -79,24 +79,20 @@
 </head>
 <body>
   <div class="container">
-    <h2>Регистрация</h2>
-    <form action="register.php" method="POST">
+    <h2>Вход</h2>
+    <form action="login.php" method="POST">
       <div class="form-group">
         <label for="username">Имя пользователя</label>
         <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="janedoe@mail.com" required>
-      </div>
-      <div class="form-group">
         <label for="password">Пароль</label>
-        <input type="password" id="password" name="password" placeholder="Создайте пароль" required>
+        <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
       </div>
-      <button type="submit" class="btn-submit">Зарегистрироваться</button>
+      <button type="submit" class="btn-submit">Войти</button>
     </form>
     <div class="form-footer">
-      Уже зарегистрированы? <a href="login.html">Войти</a>
+      Еще не зарегистрированы? <a href="register.html">Создать аккаунт</a>
     </div>
   </div>
   <div class="image-section"></div>
