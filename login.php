@@ -1,17 +1,16 @@
 <?php
-session_start(); // Запуск сессии
+session_start(); 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    // Здесь проверка имени пользователя и пароля в базе данных (добавьте реальную проверку)
-    $isAuthenticated = true; // Установите переменную на основе результата проверки
+    $isAuthenticated = true; 
 
     if ($isAuthenticated) {
-        // Сохраняем данные в сессии
-        $_SESSION['username'] = htmlspecialchars($username); // сохраняем имя пользователя в сессию
-        header("Location: dashboard.html"); // Перенаправляем на приборную панель
+       
+        $_SESSION['username'] = htmlspecialchars($username); 
+        header("Location: dashboard.html"); 
         exit();
     } else {
         echo "Неправильное имя пользователя или пароль!";
