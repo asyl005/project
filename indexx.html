@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать анкету</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Шаблон анкеты</h1>
+        <input type="text" id="surveyTitle" placeholder="Название анкеты" required>
+        <textarea id="surveyDescription" placeholder="Описание"></textarea>
+
+        <div id="questionsContainer"></div>
+        <button onclick="addQuestion()">Добавить вопрос</button>
+        <button onclick="saveSurvey()">Сохранить анкету</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

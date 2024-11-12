@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать новый опрос</title>
+    <link rel="stylesheet" href="survey_style.css">
+</head>
+<body>
+    <div class="survey-container">
+        <h1>Создать новый опрос</h1>
+        <form action="save_survey.php" method="POST" class="survey-form">
+            <label for="title">Название опроса:</label>
+            <input type="text" id="title" name="title" required placeholder="Введите название опроса">
+
+            <label for="description">Описание:</label>
+            <textarea id="description" name="description" placeholder="Введите описание опроса"></textarea>
+
+            <div class="question-section">
+                <label for="question">Добавить вопрос:</label>
+                <input type="text" id="question" name="question[]" placeholder="Введите вопрос">
+
+                <div class="options">
+                    <input type="text" name="option[]" placeholder="Вариант ответа 1">
+                    <input type="text" name="option[]" placeholder="Вариант ответа 2">
+                </div>
+                <button type="button" onclick="addOption()">Добавить вариант</button>
+            </div>
+
+            <button type="button" onclick="addQuestion()">Добавить еще один вопрос</button>
+            <button type="submit" class="submit-btn">Сохранить опрос</button>
+        </form>
+    </div>
+
+    <script>
+        function addOption() {
+            const option = document.createElement('input');
+            option.type = 'text';
+            option.name = 'option[]';
+            option.placeholder = 'Вариант ответа';
+            document.querySelector('.options').appendChild(option);
+        }
+
+        function addQuestion() {
+            const questionSection = document.createElement('div');
+            questionSection.className = 'question-section';
+
+            questionSection.innerHTML = `
+                <label for="question">Добавить вопрос:</label>
+                <input type="text" id="question" name="question[]" placeholder="Введите вопрос">
+                <div class="options">
+                    <input type="text" name="option[]" placeholder="Вариант ответа 1">
+                    <input type="text" name="option[]" placeholder="Вариант ответа 2">
+                </div>
+                <button type="button" onclick="addOption()">Добавить вариант</button>
+            `;
+
+            document.querySelector('.survey-form').insertBefore(questionSection, document.querySelector('.submit-btn'));
+        }
+    </script>
+</body>
+</html>
