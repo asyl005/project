@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background: linear-gradient(135deg, #e0dee3, #bab7d5); /* Gradient for the container */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,17 +21,24 @@ input, textarea, button {
     margin: 10px 0;
     padding: 8px;
     width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input, textarea {
+    background: #f4f4f9; /* Light background for input fields */
+    color: #2b2b3a; /* Dark brown text */
 }
 
 button {
-    background-color: #6200ea;
+    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient button */
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #3700b3;
+    background-color: #5c566e; /* Dark brown hover effect */
 }
 
 .question {
@@ -40,6 +47,7 @@ button:hover {
     margin-top: 10px;
     border-radius: 4px;
     position: relative;
+    background: linear-gradient(135deg, #d2ccdd, #beb7d5); /* Gradient for question section */
 }
 
 .option {

@@ -9,14 +9,15 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #f4f8fc;
+    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Soft warm gradient */
 }
 
 header {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Warm gradient for header */
     color: #fff;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -28,13 +29,14 @@ header {
 .logout-btn {
     color: #fff;
     text-decoration: none;
-    background-color: #333;
+    background-color: #6c4f3d; /* Dark brown */
     padding: 10px 15px;
-    border-radius: 4px;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #555;
+    background-color: #8c6a4e; /* Lighter brown on hover */
 }
 
 main {
@@ -44,9 +46,10 @@ main {
 
 .sidebar {
     width: 250px;
-    background-color: #fff;
+    background: linear-gradient(135deg, #fff3e6, #fce0b6); /* Warm gradient for sidebar */
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid #f2e1c1;
 }
 
 .sidebar nav ul {
@@ -58,24 +61,30 @@ main {
 }
 
 .sidebar nav ul li a {
-    color: #333;
+    color: #7c5c4f; /* Warm brown shade */
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .sidebar nav ul li a:hover {
-    color: #007bff;
+    color: #d47e5d; /* Accent color on hover */
 }
 
 .content {
     flex: 1;
     padding: 20px;
-    background-color: #f4f8fc;
+    background: linear-gradient(135deg, #f9fbfd, #e2dff0); /* Warm background for content */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px;
 }
 
 .content h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #6c4f3d; /* Dark brown */
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .survey-list {
@@ -85,33 +94,41 @@ main {
 }
 
 .survey-item {
-    background-color: #fff;
+    background: linear-gradient(135deg, #fff3e6, #f9d9b6); /* Gradient for survey item */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.survey-item:hover {
+    transform: translateY(-5px); /* Animation on hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .survey-item h3 {
     font-size: 20px;
-    color: #007bff;
+    color: #d47e5d; /* Accent color for the heading */
     margin-bottom: 10px;
 }
 
 .survey-item p {
-    color: #555;
+    color: #7c5c4f;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .view-btn {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 15px;
     color: #fff;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #ff9f75, #ff8e53); /* Gradient button */
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 14px;
+    transition: background 0.3s ease;
 }
 
 .view-btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #ff8e53, #d47e5d); /* Hover gradient */
 }

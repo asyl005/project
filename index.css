@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f8fc;
+    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Gradient background */
+    color: #2b2b3a; /* Dark brown with gray undertones */
 }
 
 header {
@@ -14,7 +15,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient for header */
+    color: #2b2b3a; /* Dark brown */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,24 +27,24 @@ header {
 nav a, nav select {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
+    color: #2b2b3a; /* Dark brown */
     font-size: 16px;
 }
 
 nav a:hover {
-    color: #007bff;
+    color: #6b8199;
 }
 
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background-color: #f0f4f8;
-    color: #333;
+    background: linear-gradient(135deg, #f0f4f8, #e2dff0); /* Gradient for hero section */
+    color: #2b2b3a; /* Dark brown */
 }
 
 .hero h1 {
     font-size: 36px;
-    color: #333;
+    color: #2b2b3a; /* Dark brown */
     margin-bottom: 20px;
 }
 
@@ -55,11 +57,11 @@ nav a:hover {
 .features span {
     margin: 0 10px;
     font-size: 14px;
-    color: #007bff;
+    color: #83a6cb;
 }
 
 .connect-btn {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient for button */
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
@@ -69,12 +71,17 @@ nav a:hover {
 }
 
 .connect-btn:hover {
-    background-color: #0056b3;
+    background-color: #5c566e; /* Dark brown hover effect */
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #ffffff;
-    color: #999;
+    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient for footer */
+    color: #2b2b3a; /* Dark brown */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
 }

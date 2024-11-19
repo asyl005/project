@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .survey-container {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #e0dee3, #bab7d5); /* Gradient for survey container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -26,7 +26,7 @@ body {
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #2b2b3a; /* Dark brown */
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ h1 {
     font-weight: bold;
     margin-top: 20px;
     display: block;
-    color: #333;
+    color: #2b2b3a; /* Dark brown */
 }
 
 .survey-form input[type="text"],
@@ -46,7 +46,8 @@ h1 {
     border: 1px solid #dcdfe3;
     border-radius: 5px;
     font-size: 14px;
-    color: #333;
+    color: #2b2b3a; /* Dark brown */
+    background-color: #f4f4f9; /* Light background for input fields */
 }
 
 .survey-form textarea {
@@ -55,11 +56,11 @@ h1 {
 }
 
 .question-section {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #dcdfe3;
     border-radius: 5px;
     padding: 15px;
     margin-top: 20px;
-    background-color: #f9fbfd;
+    background: linear-gradient(135deg, #f9fbfd, #e2dff0); /* Gradient for question section */
 }
 
 .options {
@@ -69,7 +70,7 @@ h1 {
 }
 
 button {
-    background-color: #4caf50;
+    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient button */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -79,7 +80,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #5c566e; /* Dark brown hover effect */
 }
 
 .submit-btn {
@@ -90,7 +91,7 @@ button:hover {
 }
 
 button[type="button"] {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #5c566e); /* Gradient for button */
     margin-top: 10px;
 }
 
