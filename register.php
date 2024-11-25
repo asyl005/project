@@ -1,8 +1,9 @@
 <?php
+//hfgcfeuhk//
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "web";
+$dbname = "survey_app";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
@@ -16,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
     
-    $sql = "INSERT INTO user_db (username, email, password) VALUES ('$username', '$email', '$password')";
+    $sql = "INSERT INTO responses (username, email, password) VALUES ('$username', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Тіркелу сәтті аяқталды. <a href='login.html'>Кіру</a>";
