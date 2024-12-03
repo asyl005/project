@@ -4,9 +4,10 @@ include 'auth.php';
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "survey_app";
+$dbname = "survey_db";
+$db_port=3307;
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname,  $db_port);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -30,3 +31,4 @@ $conn->close();
 header('Content-Type: application/json');
 echo json_encode($responses);
 ?>
+

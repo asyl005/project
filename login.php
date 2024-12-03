@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($isAuthenticated) {
        
         $_SESSION['username'] = htmlspecialchars($username); 
-        header("Location: dashboard.html"); 
+        header("Location: dashboard.php"); 
         exit();
     } else {
         echo "Неправильное имя пользователя или пароль!";
