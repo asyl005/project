@@ -4,8 +4,9 @@ $servername = "localhost";
 $db_username = "root";
 $db_password = "";
 $dbname = "survey_app";
+$db_port=3307;
 
-$conn = new mysqli($servername, $db_username, $db_password, $dbname);
+$conn = new mysqli($servername, $db_username, $db_password, $dbname, $db_port);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

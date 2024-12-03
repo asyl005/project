@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location: login.html"); // Перенаправление на страницу входа, если пользователь не авторизован
+    header("Location: login.php"); // Перенаправление на страницу входа, если пользователь не авторизован
     exit();
 }
 ?>
