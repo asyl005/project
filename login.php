@@ -19,13 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']); // Пайдаланушының енгізген аты
     $password = trim($_POST['password']); // Пайдаланушының енгізген құпиясөзі
 
-<<<<<<< HEAD
-    if ($isAuthenticated) {
-       
-        $_SESSION['username'] = htmlspecialchars($username); 
-        header("Location: dashboard.php"); 
-        exit();
-=======
     // SQL сұрау: пайдаланушыны табу
     $sql = "SELECT id, password FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
@@ -42,12 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $row['id']; // Пайдаланушының ID-ін сақтау
 
             // Жеке кабинетке өту
-            header("Location: dashboard.html");
+            header("Location: dashboard.php");
             exit();
         } else {
             echo "Қате: Құпиясөз дұрыс емес!";
         }
->>>>>>> a9f650cbd2d36c323b20eec8db46240e18b06fd1
     } else {
         echo "Қате: Пайдаланушы табылмады!";
     }

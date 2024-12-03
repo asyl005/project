@@ -4,22 +4,14 @@
 
 // Деректер базасына қосылу
 $servername = "localhost";
-<<<<<<< HEAD
 $username = "root";
 $password = "";
-$dbname = "survey_db";
-$db_port=3307;
-
-$conn = new mysqli($servername, $username, $password, $dbname,  $db_port);
-=======
-$db_username = "root";
-$db_password = "";
 $dbname = "survey_db"; // Қате түзетілді: survey_app -> survey_db
+$db_port = 3307;
 
-$conn = new mysqli($servername, $db_username, $db_password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, $db_port);
 
 // Қосылымды тексеру
->>>>>>> a9f650cbd2d36c323b20eec8db46240e18b06fd1
 if ($conn->connect_error) {
     die("Дерекқорға қосылу қатесі: " . $conn->connect_error);
 }
@@ -55,4 +47,3 @@ $conn->close();
 // Нәтижелерді JSON форматында қайтару
 echo json_encode($surveys);
 ?>
-

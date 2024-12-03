@@ -7,15 +7,9 @@ $servername = "localhost";
 $db_username = "root";
 $db_password = "";
 $dbname = "survey_db";
-<<<<<<< HEAD
-$db_port=3307;
-
-$conn = new mysqli($servername, $db_username, $db_password, $dbname, $db_port);
-=======
 
 // Деректер базасына қосылу
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
->>>>>>> a9f650cbd2d36c323b20eec8db46240e18b06fd1
 
 // Қосылымды тексеру
 if ($conn->connect_error) {
@@ -28,16 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
-<<<<<<< HEAD
-    
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
-=======
     // Деректерді тексеру
     if (empty($username) || empty($email) || empty($password)) {
         echo "Барлық өрістерді толтырыңыз.";
         exit();
     }
->>>>>>> a9f650cbd2d36c323b20eec8db46240e18b06fd1
 
     // Email форматты тексеру
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -77,5 +66,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $conn->close();
 ?>
-
-
