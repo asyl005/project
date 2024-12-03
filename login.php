@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $row['id']; // Пайдаланушының ID-ін сақтау
 
             // Жеке кабинетке өту
-            header("Location: dashboard.html");
+            header("Location: dashboard.php");
             exit();
         } else {
             echo "Қате: Құпиясөз дұрыс емес!";

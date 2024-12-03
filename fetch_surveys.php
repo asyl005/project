@@ -4,11 +4,12 @@
 
 // Деректер базасына қосылу
 $servername = "localhost";
-$db_username = "root";
-$db_password = "";
+$username = "root";
+$password = "";
 $dbname = "survey_db"; // Қате түзетілді: survey_app -> survey_db
+$db_port = 3307;
 
-$conn = new mysqli($servername, $db_username, $db_password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, $db_port);
 
 // Қосылымды тексеру
 if ($conn->connect_error) {

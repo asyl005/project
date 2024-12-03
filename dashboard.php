@@ -1,4 +1,13 @@
-<?php include 'auth.php'; ?>
+<?php 
+session_start(); 
+
+// Проверка, существует ли имя пользователя в сессии
+if (!isset($_SESSION['username'])) {
+    // Если имя пользователя не найдено в сессии, перенаправить на страницу логина
+    header("Location: login.php");
+    exit();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -11,7 +20,8 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Добро пожаловать, [Имя пользователя]!</h1> <!-- Имя пользователя подставляется динамически -->
+            <!-- Подставляем имя пользователя из сессии -->
+            <h1>Добро пожаловать, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
             <a href="logout.php" class="logout-btn">Выйти</a>
         </div>
     </header>
