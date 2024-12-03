@@ -1,49 +1,46 @@
 <?php
-// Қазақша түсініктеме:
-// Бұл файл тек ағымдағы пайдаланушының (сессия бойынша) сауалнамаларын қайтару үшін арналған.
-
-// Деректер базасына қосылу
+// Мәліметтер базасына қосылу параметрлері
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "survey_db"; // Қате түзетілді: survey_app -> survey_db
-$db_port = 3307;
+$db_username = "root";
+$db_password = "";
+$dbname = "survey_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname, $db_port);
+// Мәліметтер базасына қосылу
+$conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 // Қосылымды тексеру
 if ($conn->connect_error) {
     die("Дерекқорға қосылу қатесі: " . $conn->connect_error);
 }
 
-// Сессияны бастау және пайдаланушыны тексеру
+// Сессияны тексеру
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    echo json_encode(["error" => "Пайдаланушы кірмеген."]);
+    http_response_code(401);
+    echo json_encode(["error" => "Сессия аяқталған. Қайта кіріңіз."]);
     exit();
 }
 
-$user_id = $_SESSION['user_id']; // Сессиядан ағымдағы пайдаланушының ID-ын алу
+$user_id = $_SESSION['user_id'];
 
-// Тек ағымдағы пайдаланушының сауалнамаларын алу
+// Пайдаланушының сауалнамаларын алу
 $sql = "SELECT s.id, s.title, s.created_at, 
-               (SELECT COUNT(*) FROM responses WHERE survey_id = s.id) AS participant_count
-        FROM surveys s
+               (SELECT COUNT(*) FROM participants p WHERE p.survey_id = s.id) AS participant_count 
+        FROM surveys s 
         WHERE s.user_id = ?";
-
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $user_id); // Пайдаланушы ID-ын сұрауға қосу
+$stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
 $surveys = [];
 while ($row = $result->fetch_assoc()) {
-    $surveys[] = $row; // Сауалнамалардың мәліметтерін жинау
+    $surveys[] = $row;
 }
 
-$stmt->close();
-$conn->close();
-
-// Нәтижелерді JSON форматында қайтару
+// JSON форматында мәліметтерді қайтарамыз
+header('Content-Type: application/json');
 echo json_encode($surveys);
+
+$conn->close();
 ?>

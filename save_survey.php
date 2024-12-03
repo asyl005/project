@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    echo "Опрос сәтті сақталды! <a href='dashboard.html'>Негізгі бетке оралу</a>";
+    echo "Опрос сәтті сақталды! <a href='dashboard.php'>Негізгі бетке оралу</a>";
 }
 
 $conn->close();
