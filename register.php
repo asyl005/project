@@ -13,7 +13,7 @@ $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 // Қосылымды тексеру
 if ($conn->connect_error) {
-    die("Дерекқорға қосылу қатесі: " . $conn->connect_error);
+    die("<script>alert('Дерекқорға қосылу қатесі: " . $conn->connect_error . "');</script>");
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -24,13 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Деректерді тексеру
     if (empty($username) || empty($email) || empty($password)) {
-        echo "Барлық өрістерді толтырыңыз.";
+        echo "<script>alert('Барлық өрістерді толтырыңыз.');</script>";
         exit();
     }
 
     // Email форматты тексеру
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Неверный формат email.";
+        echo "<script>alert('Неверный формат email.');</script>";
         exit();
     }
 
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt_check->store_result();
 
     if ($stmt_check->num_rows > 0) {
-        echo "Бұл email-ге тіркелген пайдаланушы бар.";
+        echo "<script>alert('Бұл email-ге тіркелген пайдаланушы бар.');</script>";
         exit();
     }
     $stmt_check->close();
@@ -56,9 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt_insert->bind_param("sss", $username, $email, $hashed_password);
 
     if ($stmt_insert->execute()) {
-        echo "Тіркелу сәтті аяқталды. <a href='login.html'>Кіру</a>";
+        // Тіркелу сәтті аяқталды, login.html бетіне өту
+        header("Location: login.html");
+        exit();
     } else {
-        echo "Қате: " . $stmt_insert->error;
+        echo "<script>alert('Қате: " . $stmt_insert->error . "');</script>";
     }
 
     $stmt_insert->close();
