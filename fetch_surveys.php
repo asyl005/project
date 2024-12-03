@@ -1,32 +1,48 @@
 <?php
-include 'auth.php';
+// Қазақша түсініктеме:
+// Бұл файл тек ағымдағы пайдаланушының (сессия бойынша) сауалнамаларын қайтару үшін арналған.
 
+// Деректер базасына қосылу
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "survey_app";
+$db_username = "root";
+$db_password = "";
+$dbname = "survey_db"; // Қате түзетілді: survey_app -> survey_db
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $db_username, $db_password, $dbname);
+
+// Қосылымды тексеру
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Дерекқорға қосылу қатесі: " . $conn->connect_error);
 }
 
-$survey_id = $_GET['id'];
+// Сессияны бастау және пайдаланушыны тексеру
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    echo json_encode(["error" => "Пайдаланушы кірмеген."]);
+    exit();
+}
 
-$sql = "SELECT * FROM survey_responses WHERE survey_id = ?";
+$user_id = $_SESSION['user_id']; // Сессиядан ағымдағы пайдаланушының ID-ын алу
+
+// Тек ағымдағы пайдаланушының сауалнамаларын алу
+$sql = "SELECT s.id, s.title, s.created_at, 
+               (SELECT COUNT(*) FROM responses WHERE survey_id = s.id) AS participant_count
+        FROM surveys s
+        WHERE s.user_id = ?";
+
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $survey_id);
+$stmt->bind_param("i", $user_id); // Пайдаланушы ID-ын сұрауға қосу
 $stmt->execute();
 $result = $stmt->get_result();
 
-$responses = [];
+$surveys = [];
 while ($row = $result->fetch_assoc()) {
-    $responses[] = $row;
+    $surveys[] = $row; // Сауалнамалардың мәліметтерін жинау
 }
 
 $stmt->close();
 $conn->close();
 
-header('Content-Type: application/json');
-echo json_encode($responses);
+// Нәтижелерді JSON форматында қайтару
+echo json_encode($surveys);
 ?>
