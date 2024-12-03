@@ -70,7 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    echo "Опрос сәтті сақталды! <a href='dashboard.php'>Негізгі бетке оралу</a>";
+    header("Location: my_surveys.php");
+        exit();
+
 }
 
 $conn->close();

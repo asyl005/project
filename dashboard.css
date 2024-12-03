@@ -9,11 +9,11 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Soft warm gradient */
+    background: linear-gradient(135deg, #dcdbcf, #b5ae9c); /* Soft warm gradient */
 }
 
 header {
-    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Warm gradient for header */
+    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Warm gradient for header */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -29,14 +29,14 @@ header {
 .logout-btn {
     color: #fff;
     text-decoration: none;
-    background-color: #6c4f3d; /* Dark brown */
+    background-color: #bbb7d5; /* Dark brown */
     padding: 10px 15px;
     border-radius: 8px; /* Rounded corners */
     transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #8c6a4e; /* Lighter brown on hover */
+    background-color: #8e89b9; /* Lighter brown on hover */
 }
 
 main {
@@ -46,10 +46,10 @@ main {
 
 .sidebar {
     width: 250px;
-    background: linear-gradient(135deg, #fff3e6, #fce0b6); /* Warm gradient for sidebar */
+    background: linear-gradient(135deg, #ebd8cc, #d4c1af); /* Warm gradient for sidebar */
     padding: 20px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    border-right: 2px solid #f2e1c1;
+    border-right: 2px solid #f2c1c1;
 }
 
 .sidebar nav ul {
@@ -69,7 +69,7 @@ main {
 }
 
 .sidebar nav ul li a:hover {
-    color: #d47e5d; /* Accent color on hover */
+    color: #ca8282; /* Accent color on hover */
 }
 
 .content {
