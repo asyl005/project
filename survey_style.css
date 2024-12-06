@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Gradient background */
+    background: linear-gradient(135deg, #dcdbcf, #b5ae9c); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .survey-container {
-    background: linear-gradient(135deg, #e0dee3, #bab7d5); /* Gradient for survey container */
+    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Gradient for survey container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -60,7 +60,7 @@ h1 {
     border-radius: 5px;
     padding: 15px;
     margin-top: 20px;
-    background: linear-gradient(135deg, #f9fbfd, #e2dff0); /* Gradient for question section */
+    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Gradient for question section */
 }
 
 .options {
@@ -70,7 +70,7 @@ h1 {
 }
 
 button {
-    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient button */
+    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Gradient button */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -80,7 +80,7 @@ button {
 }
 
 button:hover {
-    background-color: #5c566e; /* Dark brown hover effect */
+    background-color:  #8e89b9; /* Dark brown hover effect */
 }
 
 .submit-btn {
@@ -91,10 +91,10 @@ button:hover {
 }
 
 button[type="button"] {
-    background: linear-gradient(135deg, #007bff, #5c566e); /* Gradient for button */
+    background: linear-gradient(135deg,  #93664b, #d4c1af); /* Gradient for button */
     margin-top: 10px;
 }
 
 button[type="button"]:hover {
-    background-color: #0056b3;
+    background-color: #bf8ce1;
 }
