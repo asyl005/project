@@ -132,3 +132,74 @@ main {
 .view-btn:hover {
     background: linear-gradient(135deg, #ff8e53, #d47e5d); /* Hover gradient */
 }
+
+
+/* Жалпы стильдер жоғарыда берілген */
+
+/* Мобильді құрылғыларға арналған бейімдеу */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Контентті тік бағытта орналастыру */
+        text-align: center;
+    }
+
+    .logout-btn {
+        margin-top: 10px; /* Логин батырмасының аралығын арттыру */
+    }
+
+    main {
+        flex-direction: column; /* Sidebar және контентті тік орналасуға мәжбүрлеу */
+        margin: 0; /* Қосымша шекараны жою */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar енін толық етіп көрсету */
+        margin-bottom: 10px; /* Негізгі контенттен бөлу */
+        text-align: center; /* Мәтіндерді ортаға орналастыру */
+        padding: 10px; /* Ішкі аралығын азайту */
+    }
+
+    .content {
+        margin: 0; /* Қосымша шекараны жою */
+        padding: 10px; /* Аз ішкі аралық */
+        border-radius: 0; /* Дөңгеленген шеттерді алып тастау */
+    }
+
+    .survey-list {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Бір бағанаға көшу */
+    }
+
+    .survey-item {
+        font-size: 14px; /* Шрифт өлшемін азайту */
+        padding: 15px; /* Аз ішкі аралық */
+    }
+
+    .view-btn {
+        padding: 8px 10px; /* Батырманың өлшемін азайту */
+    }
+}
+
+/* Өте кіші экрандарға арналған */
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Header биіктігін азайту */
+    }
+
+    .logout-btn {
+        font-size: 12px; /* Шрифт өлшемін кішірейту */
+        padding: 8px 10px; /* Батырманың ішкі аралығын азайту */
+    }
+
+    .survey-item h3 {
+        font-size: 16px; /* Тақырып өлшемін азайту */
+    }
+
+    .survey-item p {
+        font-size: 12px; /* Сипаттаманың шрифт өлшемін азайту */
+    }
+
+    .view-btn {
+        font-size: 12px; /* Батырма шрифтін азайту */
+        padding: 6px 8px; /* Батырманың ішкі аралығын кішірейту */
+    }
+}

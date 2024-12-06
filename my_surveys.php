@@ -46,15 +46,87 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Менің сауалнамаларым</title>
     <style>
-        .survey-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: linear-gradient(135deg, #dcdbcf, #b5ae9c);
+        }
+
+        header {
+            background: linear-gradient(135deg, #aeaa9e, #c0c0b8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: linear-gradient(135deg, #f9fbfd, #e2dff0);
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .content h1 {
+            color: #6c4f3d;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .survey-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .survey-item {
+            background: linear-gradient(135deg, #fff3e6, #f9d9b6);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .survey-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .survey-item h3 {
+            font-size: 20px;
+            color: #d47e5d;
+            margin-bottom: 10px;
+        }
+
+        .survey-item p {
+            color: #7c5c4f;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
         .view-btn {
-            color: blue;
+            display: inline-block;
+            padding: 10px 15px;
+            color: #fff;
+            background: linear-gradient(135deg, #ff9f75, #ff8e53);
             text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .view-btn:hover {
+            background: linear-gradient(135deg, #ff8e53, #d47e5d);
         }
     </style>
 </head>

@@ -32,7 +32,7 @@ if (!isset($_SESSION['username'])) {
                 <ul>
                     <li><a href="create_survey.html">Создать новый опрос</a></li>
                     <li><a href="my_surveys.php">Мои опросы</a></li>
-                    <li><a href="results.html">Результаты</a></li>
+                    <li><a href="fetch_surveys.php">Результаты</a></li>
                     <li><a href="profile.html">Настройки профиля</a></li>
                 </ul>
             </nav>

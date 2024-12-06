@@ -1,10 +1,11 @@
 <?php
-// Деректер базасына қосылу
+// Деректер базасына қосылу параметрлері
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "survey_db"; // Құрылымға сәйкес база атауы
+$dbname = "survey_db";
 
+// Дерекқорға қосылу
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 // Қосылымды тексеру
@@ -12,33 +13,29 @@ if ($conn->connect_error) {
     die("Дерекқорға қосылу қатесі: " . $conn->connect_error);
 }
 
-// Сауалнама ID алу
-if (isset($_GET['id'])) {
-    $survey_id = $_GET['id'];
-
-    // Сауалнамаға қатысушылардың жауаптарын алу
-    $sql = "SELECT r.response_date, o.text AS response, u.username 
-            FROM responses r
-            JOIN options o ON r.option_id = o.id
-            JOIN users u ON r.user_id = u.id
-            WHERE o.survey_id = ?";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $survey_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    $responses = [];
-    while ($row = $result->fetch_assoc()) {
-        $responses[] = $row;
-    }
-
-    $stmt->close();
-    $conn->close();
-
-    // JSON форматында жауаптарды қайтару
-    echo json_encode($responses);
-} else {
-    echo json_encode(["error" => "Не указан ID опроса."]);
+// Сауалнама ID-сін тексеру
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+    echo json_encode(["error" => "Сауалнама ID көрсетілмеген."]);
+    exit;
 }
+
+$survey_id = intval($_GET['id']);
+
+// Нәтижелерді алу
+$sql = "SELECT response, response_date FROM responses WHERE survey_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $survey_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$responses = [];
+while ($row = $result->fetch_assoc()) {
+    $responses[] = $row;
+}
+
+$conn->close();
+
+// JSON форматында нәтижелерді қайтару
+header('Content-Type: application/json');
+echo json_encode($responses);
 ?>
