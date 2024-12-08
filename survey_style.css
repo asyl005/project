@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #dcdbcf, #b5ae9c); /* Gradient background */
+    background: linear-gradient(135deg, #f7eade, #f6f9f5); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .survey-container {
-    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Gradient for survey container */
+    background: linear-gradient(135deg, #e4cab6, #c3a99c); /* Gradient for survey container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -26,7 +26,7 @@ body {
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #2b2b3a; /* Dark brown */
+    color: #b3a89a; /* Soft brown */
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ h1 {
     font-weight: bold;
     margin-top: 20px;
     display: block;
-    color: #2b2b3a; /* Dark brown */
+    color: #b3a89a; /* Soft brown */
 }
 
 .survey-form input[type="text"],
@@ -43,11 +43,11 @@ h1 {
     padding: 10px;
     margin-top: 8px;
     margin-bottom: 10px;
-    border: 1px solid #dcdfe3;
+    border: 1px solid #aaada6; /* Border in soft gray */
     border-radius: 5px;
     font-size: 14px;
-    color: #2b2b3a; /* Dark brown */
-    background-color: #f4f4f9; /* Light background for input fields */
+    color: #b3a89a; /* Text color */
+    background-color: #f7eade; /* Light beige background */
 }
 
 .survey-form textarea {
@@ -56,11 +56,11 @@ h1 {
 }
 
 .question-section {
-    border: 1px solid #dcdfe3;
+    border: 1px solid #aaada6; /* Border for question section */
     border-radius: 5px;
     padding: 15px;
     margin-top: 20px;
-    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Gradient for question section */
+    background: linear-gradient(135deg, #f7eade, #e4cab6); /* Gradient for question section */
 }
 
 .options {
@@ -70,7 +70,7 @@ h1 {
 }
 
 button {
-    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Gradient button */
+    background: linear-gradient(135deg, #aaada6, #c3a99c); /* Gradient button */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -80,7 +80,7 @@ button {
 }
 
 button:hover {
-    background-color:  #8e89b9; /* Dark brown hover effect */
+    background-color: #b3a89a; /* Hover color */
 }
 
 .submit-btn {
@@ -91,10 +91,10 @@ button:hover {
 }
 
 button[type="button"] {
-    background: linear-gradient(135deg,  #93664b, #d4c1af); /* Gradient for button */
+    background: linear-gradient(135deg, #c3a99c, #e4cab6); /* Gradient for secondary button */
     margin-top: 10px;
 }
 
 button[type="button"]:hover {
-    background-color: #bf8ce1;
+    background-color: #aaada6; /* Hover effect for secondary button */
 }

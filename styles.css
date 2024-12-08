@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f1f0f5, #e2dff0); /* Gradient background */
+    background: linear-gradient(135deg, #f7eade, #f6f9f5); /* Обновленный градиент фона */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background: linear-gradient(135deg, #e0dee3, #bab7d5); /* Gradient for the container */
+    background: linear-gradient(135deg, #e4cab6, #c3a99c); /* Обновленный градиент для контейнера */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,33 +21,33 @@ input, textarea, button {
     margin: 10px 0;
     padding: 8px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #b3a89a; /* Легкий тёплый коричневый цвет для рамки */
     border-radius: 4px;
 }
 
 input, textarea {
-    background: #f4f4f9; /* Light background for input fields */
-    color: #2b2b3a; /* Dark brown text */
+    background: #f7eade; /* Светлый фон для полей ввода */
+    color: #b3a89a; /* Тёмно-коричневый текст */
 }
 
 button {
-    background: linear-gradient(135deg, #8e89b9, #bbb7d5); /* Gradient button */
+    background: linear-gradient(135deg, #aaada6, #c3a99c); /* Обновленный градиент кнопки */
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #5c566e; /* Dark brown hover effect */
+    background-color: #b3a89a; /* Тёплый коричневый цвет при наведении */
 }
 
 .question {
-    border: 1px solid #ddd;
+    border: 1px solid #b3a89a; /* Лёгкая рамка для секции вопроса */
     padding: 10px;
     margin-top: 10px;
     border-radius: 4px;
     position: relative;
-    background: linear-gradient(135deg, #d2ccdd, #beb7d5); /* Gradient for question section */
+    background: linear-gradient(135deg, #e4cab6, #f7eade); /* Градиент для секции вопроса */
 }
 
 .option {
