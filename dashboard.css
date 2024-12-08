@@ -9,11 +9,11 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(135deg, #dcdbcf, #b5ae9c); /* Soft warm gradient */
+    background: linear-gradient(135deg, #f7eade, #e4cab6); /* Мягкий градиент */
 }
 
 header {
-    background: linear-gradient(135deg, #aeaa9e, #c0c0b8); /* Warm gradient for header */
+    background: linear-gradient(135deg, #b3a89a, #c3a99c); /* Тёплый градиент для хедера */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -29,14 +29,14 @@ header {
 .logout-btn {
     color: #fff;
     text-decoration: none;
-    background-color: #bbb7d5; /* Dark brown */
+    background-color: #aaada6; /* Мягкий серый */
     padding: 10px 15px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; /* Закруглённые края */
     transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #8e89b9; /* Lighter brown on hover */
+    background-color: #c3a99c; /* Лёгкий оттенок при наведении */
 }
 
 main {
@@ -46,10 +46,10 @@ main {
 
 .sidebar {
     width: 250px;
-    background: linear-gradient(135deg, #ebd8cc, #d4c1af); /* Warm gradient for sidebar */
+    background: linear-gradient(135deg, #f7eade, #e4cab6); /* Мягкий градиент для бокового меню */
     padding: 20px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    border-right: 2px solid #f2c1c1;
+    border-right: 2px solid #f7eade;
 }
 
 .sidebar nav ul {
@@ -61,7 +61,7 @@ main {
 }
 
 .sidebar nav ul li a {
-    color: #7c5c4f; /* Warm brown shade */
+    color: #b3a89a; /* Тёплый серо-коричневый */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -69,20 +69,20 @@ main {
 }
 
 .sidebar nav ul li a:hover {
-    color: #ca8282; /* Accent color on hover */
+    color: #c3a99c; /* Акцентный цвет при наведении */
 }
 
 .content {
     flex: 1;
     padding: 20px;
-    background: linear-gradient(135deg, #f9fbfd, #e2dff0); /* Warm background for content */
-    border-radius: 8px; /* Rounded corners */
+    background: linear-gradient(135deg, #f6f9f5, #f7eade); /* Мягкий фон для контента */
+    border-radius: 8px; /* Закруглённые края */
     margin: 10px;
 }
 
 .content h2 {
     margin-bottom: 20px;
-    color: #6c4f3d; /* Dark brown */
+    color: #b3a89a; /* Темно-коричневый */
     font-size: 24px;
     font-weight: bold;
 }
@@ -94,7 +94,7 @@ main {
 }
 
 .survey-item {
-    background: linear-gradient(135deg, #fff3e6, #f9d9b6); /* Gradient for survey item */
+    background: linear-gradient(135deg, #f7eade, #e4cab6); /* Градиент для элемента опроса */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -102,18 +102,18 @@ main {
 }
 
 .survey-item:hover {
-    transform: translateY(-5px); /* Animation on hover */
+    transform: translateY(-5px); /* Анимация при наведении */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .survey-item h3 {
     font-size: 20px;
-    color: #d47e5d; /* Accent color for the heading */
+    color: #c3a99c; /* Акцентный цвет для заголовка */
     margin-bottom: 10px;
 }
 
 .survey-item p {
-    color: #7c5c4f;
+    color: #b3a89a;
     margin-bottom: 10px;
     font-size: 16px;
 }
@@ -122,7 +122,7 @@ main {
     display: inline-block;
     padding: 10px 15px;
     color: #fff;
-    background: linear-gradient(135deg, #ff9f75, #ff8e53); /* Gradient button */
+    background: linear-gradient(135deg, #c3a99c, #aaada6); /* Градиент для кнопки */
     text-decoration: none;
     border-radius: 8px;
     font-size: 14px;
@@ -130,76 +130,72 @@ main {
 }
 
 .view-btn:hover {
-    background: linear-gradient(135deg, #ff8e53, #d47e5d); /* Hover gradient */
+    background: linear-gradient(135deg, #b3a89a, #c3a99c); /* Градиент при наведении */
 }
 
-
-/* Жалпы стильдер жоғарыда берілген */
-
-/* Мобильді құрылғыларға арналған бейімдеу */
+/* Мобильные стили */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column; /* Контентті тік бағытта орналастыру */
+        flex-direction: column;
         text-align: center;
     }
 
     .logout-btn {
-        margin-top: 10px; /* Логин батырмасының аралығын арттыру */
+        margin-top: 10px;
     }
 
     main {
-        flex-direction: column; /* Sidebar және контентті тік орналасуға мәжбүрлеу */
-        margin: 0; /* Қосымша шекараны жою */
+        flex-direction: column;
+        margin: 0;
     }
 
     .sidebar {
-        width: 100%; /* Sidebar енін толық етіп көрсету */
-        margin-bottom: 10px; /* Негізгі контенттен бөлу */
-        text-align: center; /* Мәтіндерді ортаға орналастыру */
-        padding: 10px; /* Ішкі аралығын азайту */
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 10px;
     }
 
     .content {
-        margin: 0; /* Қосымша шекараны жою */
-        padding: 10px; /* Аз ішкі аралық */
-        border-radius: 0; /* Дөңгеленген шеттерді алып тастау */
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
     }
 
     .survey-list {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Бір бағанаға көшу */
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
 
     .survey-item {
-        font-size: 14px; /* Шрифт өлшемін азайту */
-        padding: 15px; /* Аз ішкі аралық */
+        font-size: 14px;
+        padding: 15px;
     }
 
     .view-btn {
-        padding: 8px 10px; /* Батырманың өлшемін азайту */
+        padding: 8px 10px;
     }
 }
 
-/* Өте кіші экрандарға арналған */
 @media (max-width: 480px) {
     header {
-        padding: 10px; /* Header биіктігін азайту */
+        padding: 10px;
     }
 
     .logout-btn {
-        font-size: 12px; /* Шрифт өлшемін кішірейту */
-        padding: 8px 10px; /* Батырманың ішкі аралығын азайту */
+        font-size: 12px;
+        padding: 8px 10px;
     }
 
     .survey-item h3 {
-        font-size: 16px; /* Тақырып өлшемін азайту */
+        font-size: 16px;
     }
 
     .survey-item p {
-        font-size: 12px; /* Сипаттаманың шрифт өлшемін азайту */
+        font-size: 12px;
     }
 
     .view-btn {
-        font-size: 12px; /* Батырма шрифтін азайту */
-        padding: 6px 8px; /* Батырманың ішкі аралығын кішірейту */
+        font-size: 12px;
+        padding: 6px 8px;
     }
 }
